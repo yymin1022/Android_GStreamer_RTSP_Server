@@ -1,6 +1,8 @@
 package com.geeksloft.rtsp
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,6 +16,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     external fun startRtspServer()
+    external fun stopRtspServer()
+
+    private var btnStart: Button? = null
+    private var btnStop: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +31,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        startRtspServer()
+        btnStart = findViewById(R.id.main_btn_start_server)
+        btnStop = findViewById(R.id.main_btn_stop_server)
+
+        btnStart!!.setOnClickListener(btnListener)
+        btnStop!!.setOnClickListener(btnListener)
+    }
+
+    private val btnListener = View.OnClickListener {
+        when(it.id) {
+            R.id.main_btn_start_server -> startRtspServer()
+            R.id.main_btn_stop_server -> stopRtspServer()
+        }
     }
 }
