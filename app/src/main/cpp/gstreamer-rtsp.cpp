@@ -10,5 +10,11 @@
 extern "C" JNIEXPORT void JNICALL
 Java_com_geeksloft_rtsp_MainActivity_startRtspServer(JNIEnv* env, jobject)
 {
-    LOG_I("NDK Function Loaded!!");
+    LOG_I("Start RTSP Server");
+}
+
+extern "C" JNIEXPORT void JNICALL
+Java_com_geeksloft_rtsp_MainActivity_stopRtspServer(JNIEnv* env, jobject)
+{
+    LOG_I("Stop RTSP Server");
 }
