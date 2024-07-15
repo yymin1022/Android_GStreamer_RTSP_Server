@@ -11,7 +11,11 @@ class RTSPServerService : Service() {
         gstreamerUtil = GstreamerUtil()
     }
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        gstreamerUtil!!.startRtspServer()
+        Thread {
+            Runnable {
+                gstreamerUtil!!.startRtspServer()
+            }.run()
+        }.start()
         return START_STICKY
     }
 
