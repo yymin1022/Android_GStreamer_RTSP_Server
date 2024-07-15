@@ -1,5 +1,6 @@
 package com.geeksloft.rtsp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -9,15 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    companion object {
-        init {
-            System.loadLibrary("gstreamer-rtsp")
-        }
-    }
-
-    external fun startRtspServer()
-    external fun stopRtspServer()
-
     private var btnStart: Button? = null
     private var btnStop: Button? = null
 
@@ -40,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
     private val btnListener = View.OnClickListener {
         when(it.id) {
-            R.id.main_btn_start_server -> startRtspServer()
-            R.id.main_btn_stop_server -> stopRtspServer()
+            R.id.main_btn_start_server -> startService(Intent(applicationContext, RTSPServerService::class.java))
+            R.id.main_btn_stop_server -> stopService(Intent(applicationContext, RTSPServerService::class.java))
         }
     }
 }

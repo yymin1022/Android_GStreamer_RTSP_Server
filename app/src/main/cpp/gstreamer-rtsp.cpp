@@ -8,13 +8,13 @@
 #define LOG_E(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_geeksloft_rtsp_MainActivity_startRtspServer(JNIEnv* env, jobject)
+Java_com_geeksloft_rtsp_GstreamerUtil_startRtspServer(JNIEnv* env, jobject)
 {
     LOG_I("Start RTSP Server");
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_geeksloft_rtsp_MainActivity_stopRtspServer(JNIEnv* env, jobject)
+Java_com_geeksloft_rtsp_GstreamerUtil_stopRtspServer(JNIEnv* env, jobject)
 {
     LOG_I("Stop RTSP Server");
 }
