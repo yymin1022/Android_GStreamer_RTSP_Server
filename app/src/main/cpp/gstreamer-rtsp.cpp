@@ -39,7 +39,6 @@ Java_com_geeksloft_rtsp_GstreamerUtil_startRtspServer(JNIEnv* env, jobject)
     g_timeout_add_seconds(2, (GSourceFunc) timeout, server);
 
     g_main_loop_run(loop);
-    LOG_I("Started RTSP Server");
 }
 
 extern "C" JNIEXPORT void JNICALL
