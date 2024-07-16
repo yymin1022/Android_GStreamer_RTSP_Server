@@ -29,7 +29,7 @@ timeout (GstRTSPServer *svr)
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_geeksloft_rtsp_GstreamerUtil_startRtspServer(JNIEnv* env, jobject)
+Java_com_yong_rtsp_GstreamerUtil_startRtspServer(JNIEnv* env, jobject)
 {
     LOG_I("Starting RTSP Server");
     gst_init(NULL, NULL);
@@ -56,7 +56,7 @@ Java_com_geeksloft_rtsp_GstreamerUtil_startRtspServer(JNIEnv* env, jobject)
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_geeksloft_rtsp_GstreamerUtil_stopRtspServer(JNIEnv* env, jobject)
+Java_com_yong_rtsp_GstreamerUtil_stopRtspServer(JNIEnv* env, jobject)
 {
     LOG_I("Stopping RTSP Server");
     if (loop != NULL)

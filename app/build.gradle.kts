@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.geeksloft.rtsp"
+    namespace = "com.yong.rtsp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.geeksloft.rtsp"
+        applicationId = "com.yong.rtsp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -1,4 +1,4 @@
-package com.geeksloft.rtsp
+package com.yong.rtsp
 
 import android.app.Service
 import android.content.Intent

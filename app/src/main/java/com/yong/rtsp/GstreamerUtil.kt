@@ -1,4 +1,4 @@
-package com.geeksloft.rtsp
+package com.yong.rtsp
 
 class GstreamerUtil {
     companion object {
